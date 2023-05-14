@@ -1,0 +1,59 @@
+﻿@model QuanlyNganHang.Models.tblChiTiethopdongvay
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteConfirmed</title>
+</head>
+<body>
+    <h3>Bạn có chắc chắn muốn xóa không ?</h3>
+    <div>
+        <h4>tblChiTiethopdongvay</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Sohopdong)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sohopdong)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Manguyente)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Manguyente)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Soluong)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Soluong)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Trở về danh sách", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

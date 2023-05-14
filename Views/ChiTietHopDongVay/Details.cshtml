@@ -1,0 +1,45 @@
+﻿@model QuanlyNganHang.Models.tblChiTiethopdongvay
+
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Content/TW2.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>
+    Chi tiết
+</h2>
+<div>
+    <h4>tblChiTiethopdongvay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sohopdong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sohopdong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manguyente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manguyente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

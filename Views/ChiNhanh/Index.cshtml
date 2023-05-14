@@ -1,0 +1,73 @@
+﻿@model PagedList.IPagedList<QuanlyNganHang.Models.tblChiNhanh>
+@using PagedList.Mvc;
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+
+    <table class="table">
+        <tr>
+           
+
+            <th>
+                Machinhanh
+            </th>
+            <th>
+                TenChiNhanh
+            </th>
+            <th>
+                DiaChi
+            </th>
+            <th>
+
+                @Html.ActionLink("Tạo mới", "Create") |
+            </th>
+
+            <th>
+                @using (Html.BeginForm("Index"))
+                {
+                }
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="justify">
+                    @Html.DisplayFor(modelItem => item.Machinhanh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenChiNhanh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.Machinhanh }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.Machinhanh }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.Machinhanh })|
+                    @Html.ActionLink("Tìm kiếm", "Find")|
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+</body>
+</html>

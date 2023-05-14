@@ -1,0 +1,46 @@
+﻿@model QuanlyNganHang.Models.tblChiNhanh
+
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+}
+
+<h2>
+    Chi tiết
+</h2>
+<div>
+    <h4>tblChiNhanh</h4>
+    <hr />
+    <dl class="table"
+        <dt class>
+            @Html.DisplayNameFor(model => model.Machinhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Machinhanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenChiNhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenChiNhanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Trở về danh sách", "Index")
+</p>

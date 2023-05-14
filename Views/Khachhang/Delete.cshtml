@@ -1,0 +1,78 @@
+﻿@model QuanlyNganHang.Models.tblKhachhang
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Bạn có chắc chắn muốn xóa không ??</h3>
+    <div>
+        <h4>tblKhachhang</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Makhachhang)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Makhachhang)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tenkhachhang)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tenkhachhang)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SoCMND)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SoCMND)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DienThoai)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DienThoai)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Diachilienhe)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Diachilienhe)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.Makhachhang)
+
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Trở về danh sách", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@model QuanlyNganHang.Models.tblHopDongvay
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    ViewBag.Title = "Xóa"; 
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc chắn muốn xóa không ?</h3>
+<div>
+    <h4>tblHopDongvay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sohopdong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sohopdong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngaylaphopdong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaylaphopdong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Machinhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Machinhanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Makhachhang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Makhachhang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mathoihan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mathoihan)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Sohopdong)
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về danh sách", "Index")
+        </div>
+    }
+</div>

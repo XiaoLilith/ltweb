@@ -1,0 +1,53 @@
+﻿@model QuanlyNganHang.Models.tblThoiHanvay
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>tblThoiHanvay</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Mathoihan)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mathoihan)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tylelaisuat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tylelaisuat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Ghichu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Ghichu)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.Mathoihan }) |
+        @Html.ActionLink("Trở về danh sách", "Index")
+    </p>
+</body>
+</html>

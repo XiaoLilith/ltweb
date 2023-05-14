@@ -1,0 +1,45 @@
+﻿@model QuanlyNganHang.Models.tblNguyente
+
+@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    <link href="~/Content/TW2.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>tblNguyente</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Manguyente)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Manguyente)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Tennguyente)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Tennguyente)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Manguyente }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

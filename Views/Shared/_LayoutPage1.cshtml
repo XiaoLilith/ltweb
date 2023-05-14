@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <table border="1" height="880px" width="100px">
+        <tr>
+            <td colspan="2" height="100" background="https://webstatic.hoyoverse.com/upload/contentweb/2022/09/08/025dd263343936c583ff1865bc19ff1e_145731085188402416.png" style="color:aqua">
+                <center>
+                    <h1>
+                         TRANG WEB QUẢN LÝ VIỆC CHO VAY TIỀN TẠI NGÂN HÀNG
+                    </h1>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td height="820px" width="450px" background="https://img5.thuthuatphanmem.vn/uploads/2022/01/11/anh-nen-trang-tinh-khoi_013900337.jpg">
+                <h2> @Html.ActionLink("ChiNhanh", "../ChiNhanh/Index")<br /></h2>
+                <h2> @Html.ActionLink("Chi Tiết Hợp Đồng Vay", "../ChiTietHopDongVay/Index")<br /></h2>
+                <h2> @Html.ActionLink("Hợp đồng vay", "../HopDongVay/Index")<br /></h2>
+                <h2> @Html.ActionLink("Khách hàng", "../Khachhang/Index")<br /></h2>
+                <h2> @Html.ActionLink("Nguyên tệ", "../Nguyente/Index")<br /></h2>
+                <h2> @Html.ActionLink("Tỷ giá", "../Tygia/Index")<br /></h2>
+                <h2> @Html.ActionLink("Thời hạn vay", "../ThoiHanVay/Index")<br /></h2>
+
+
+
+            </td>
+            <td colspan="2"height="700px" background="https://img5.thuthuatphanmem.vn/uploads/2022/01/11/anh-nen-trang-tinh-khoi_013900337.jpg"  width="450px">
+                <div>
+                    @RenderBody()
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" width="40px" background="https://png.pngtree.com/thumb_back/fh260/background/20220216/pngtree-wavy-streamline-line-background-on-white-background-image_929724.jpg">
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
